@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script
+      src="https://kit.fontawesome.com/4437dc6d2c.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Frontend Mentor | Launch countdown timer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img src="./images/bg-stars.svg" class="absolute -z-10" alt="" />
+    <main class="mt-20">
+      <h1>We're launching soon</h1>
+      <section class="main-section">
+        <article>
+          <h2 id="day"></h2>
+          <p>DAYS</p>
+        </article>
+        <article class="shadow-lg">
+          <h2 id="hour"></h2>
+          <p class="text-pry-grayish-blue">HOURS</p>
+        </article>
+        <article class="shadow-lg">
+          <h2 id="minutes"></h2>
+          <p class="text-pry-grayish-blue">MINUTES</p>
+        </article>
+        <article class="shadow-lg">
+          <h2 id="seconds"></h2>
+          <p class="text-pry-grayish-blue">SECONDS</p>
+        </article>
+      </section>
+      <section class="footer-section">
+        <img src="./images/pattern-hills.svg" class="bg-img" alt="" />
+
+        <i
+          class="fa-brands fa-facebook-square text-pry-grayish-blue hover:text-pry-soft-red"
+        ></i>
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </section>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >
+      <br />
+      Coded by <a href="https://github.com/JustShuaib">Adeoti Shuaib</a>
+    </div>
+    <script src="./countdown.js"></script>
+  </body>
+</html>
