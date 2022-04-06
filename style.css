@@ -506,6 +506,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 body {
   position: relative;
   max-height: 100vh;
+  vertical-scroll: no-scroll;
   --tw-bg-opacity: 1;
   background-color: hsl(235 16% 14% / var(--tw-bg-opacity));
   font-family: Red Hat Text, sans-serif;
@@ -562,6 +563,7 @@ main {
   background-image: url(./images/pattern-hills.svg);
   background-position: bottom;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 @media (min-width: 1024px) {
