@@ -1,8 +1,12 @@
 const uiTime = document.querySelectorAll("h2");
-const now = new Date().getDate();
-let endDate = new Date(2022, 01, now + 10, 22, 30);
-// Calcuate the time difference in days, hours, mins and secs
-
+// Always add 10 days to current day
+function addDays(date, days) {
+  const copy = new Date(Number(date));
+  copy.setDate(date.getDate() + days);
+  return copy;
+}
+const date = new Date();
+const endDate = addDays(date, 10);
 function updateUi() {
   const today = new Date();
   const timeDiff = endDate - today;
@@ -11,10 +15,9 @@ function updateUi() {
   let minutes = parseInt((timeDiff / (1000 * 60)) % 60);
   let seconds = parseInt((timeDiff / 1000) % 60);
 
-  // Input the calcualted values into the DOM elementss
   const results = [days, hours, minutes, seconds];
 
-  // Checks if any of the time is less than 10 and adds 0 to the beginning
+  //Adds 10 to single digit
   function format(time) {
     if (time < 10) () => (time = `0${time}`);
     return time;
