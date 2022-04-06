@@ -505,6 +505,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 body {
   position: relative;
+  max-height: 100vh;
   --tw-bg-opacity: 1;
   background-color: hsl(235 16% 14% / var(--tw-bg-opacity));
   font-family: Red Hat Text, sans-serif;
