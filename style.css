@@ -553,18 +553,19 @@ main {
 }
 
 .footer-section {
-  position: relative;
-  margin-top: 20rem;
+  padding-top: 20rem;
+  padding-bottom: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: url(./images/pattern-hills.svg);
-  background-position: center;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 1024px) {
   .footer-section {
-    margin-top: 15rem;
+    padding-top: 15rem;
   }
 }
 
@@ -602,6 +603,42 @@ h2 {
   line-height: 2.5rem;
   --tw-text-opacity: 1;
   color: hsl(345 95% 68% / var(--tw-text-opacity));
+  box-shadow: rgb(0, 0, 0) -10px 20px 30px -10px;
+  position: relative;
+}
+h2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 0px 100% 100% 0;
+  /* border-radius: 100%; */
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: -5%;
+  z-index: 20;
+  background-color: black;
+}
+.line-through {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 200px;
+  border-radius: 150px 150px 0 0;
+  background-color: green;
+}
+h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  /* border-radius: 0px 50px 0px 50px; */
+  width: 8px;
+  height: 10px;
+  top: 50%;
+  right: 0;
+  /* z-index: 20; */
+  background-color: black;
 }
 
 @media (min-width: 1024px) {
@@ -624,28 +661,10 @@ p {
   color: hsl(237 18% 59% / var(--tw-text-opacity));
 }
 
-.footer-section i {
-  margin-right: 2rem;
+.footer-section svg {
+  margin-right: 1.5rem;
   cursor: pointer;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  --tw-text-opacity: 1;
-  color: hsl(237 18% 59% / var(--tw-text-opacity));
 }
-
-.footer-section i:hover {
-  --tw-text-opacity: 1;
-  color: hsl(345 95% 68% / var(--tw-text-opacity));
-}
-
-.bg-img {
-  position: absolute;
-  bottom: 0px;
-  z-index: -10;
-  width: 100%;
-}
-
-.hover\:text-pry-soft-red:hover {
-  --tw-text-opacity: 1;
-  color: hsl(345 95% 68% / var(--tw-text-opacity));
+.footer-section svg:hover .social-icon {
+  fill: hsl(345 95% 68% / var(--tw-text-opacity));
 }
