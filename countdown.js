@@ -6,7 +6,7 @@ function addDays(date, days) {
   return copy;
 }
 const date = new Date();
-const endDate = addDays(date, 10);
+const endDate = addDays(date, 14);
 function updateUi() {
   const today = new Date();
   const timeDiff = endDate - today;
