@@ -19,7 +19,7 @@ function updateUi() {
 
   //Adds 10 to single digit
   function format(time) {
-    if (time < 10) () => (time = `0${time}`);
+    if (time < 10) time = `0${time}`;
     return time;
   }
 

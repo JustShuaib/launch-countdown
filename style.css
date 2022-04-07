@@ -590,28 +590,35 @@ article > :not([hidden]) ~ :not([hidden]) {
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
-
-h2 {
+article div {
+  position: relative;
   width: 100%;
   max-width: 8rem;
-  border-radius: 0.375rem;
+  border-radius: 0.3rem;
   --tw-bg-opacity: 1;
   background-color: hsl(236 21% 26% / var(--tw-bg-opacity));
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  box-shadow: rgb(0, 0, 0) -10px 20px 30px -10px;
+}
+@media (min-width: 400px) {
+  article div {
+    border-radius: 0.375rem;
+  }
+}
+h2 {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 2.5rem;
   --tw-text-opacity: 1;
   color: hsl(345 95% 68% / var(--tw-text-opacity));
-  box-shadow: rgb(0, 0, 0) -10px 20px 30px -10px;
   position: relative;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 @media (min-width: 400px) {
   h2 {
     font-size: 2.25rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 }
 @media (min-width: 1024px) {
@@ -620,42 +627,43 @@ h2 {
     padding-bottom: 2rem;
   }
 }
-
-h2::before {
+article div.line-through {
   content: "";
   position: absolute;
   top: 50%;
-  left: -4%;
+  height: 1px;
+  width: 100%;
+  z-index: 10;
+  background-color: hsl(235, 16%, 14%);
+}
+article > div::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 4px);
+  left: -0.25rem;
   transform: rotateZ(90deg);
   height: 8px;
   width: 15px;
   border-radius: 15px 15px 0px 0;
   background-color: hsl(235, 16%, 14%);
 }
-@media (min-width: 1024px) {
-  h2::before {
-    left: -2%;
+@media (min-width: 400px) {
+  article > div::before {
+    left: -5%;
   }
 }
 
-.line-through {
-  position: absolute;
-  top: 23%;
-  height: 1px;
-  width: 100%;
-  z-index: 20;
-  background-color: hsl(234, 17%, 12%);
-}
 @media (min-width: 1024px) {
-  .line-through {
-    top: 23%;
+  article > div::before {
+    left: -3%;
   }
 }
-h2::after {
+
+article > div::after {
   content: "";
   position: absolute;
-  top: 50%;
-  right: -5%;
+  top: calc(50% - 4px);
+  right: -0.25rem;
   transform: rotateZ(-90deg);
   height: 8px;
   width: 15px;
@@ -663,13 +671,9 @@ h2::after {
   background-color: hsl(235, 16%, 14%);
 }
 @media (min-width: 1024px) {
-  h2::after {
+  article > div::after {
     right: -3%;
   }
-}
-h2 {
-  font-size: 3rem;
-  line-height: 1;
 }
 p {
   font-size: 0.75rem;
